@@ -1,4 +1,5 @@
 import React from "react";
+import classes from './Sidebar.module.css';
 
 const Sidebar = () => {
   return (
@@ -24,9 +25,9 @@ const Sidebar = () => {
             <div className="p-4">
               <h4 className="font-italic">Elsewhere</h4>
               <ol className="list-unstyled">
-                <li><a href="#">GitHub</a></li>
-                <li><a href="#">Twitter</a></li>
-                <li><a href="#">Facebook</a></li>
+                <li><a className={classes.item} href="#">GitHub</a></li>
+                <li><a className={classes.item} href="#">Twitter</a></li>
+                <li><a className={classes.item} href="#">Facebook</a></li>
               </ol>
             </div>
           </aside>

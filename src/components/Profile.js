@@ -1,4 +1,5 @@
 import React from "react";
+import classes from './Profile.module.css';
 
 const Profile = () => {
   return (
@@ -35,6 +36,10 @@ const Profile = () => {
             <h3 className="pb-4 mb-4 font-italic border-bottom">
               From the Firehose
             </h3>
+
+            <p className={`${classes.item} ${classes.line_through}`}>
+              New article text
+            </p>
 
             <div className="blog-post">
               <h2 className="blog-post-title">Sample blog post</h2>
