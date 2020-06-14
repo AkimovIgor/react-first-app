@@ -2,22 +2,26 @@ import React from "react";
 import Sidebar from "../Sidebar/Sidebar";
 import Profile from "./Profile/Profile";
 import Dialogs from "./Dialogs/Dialogs";
+import Music from "./Music/Music";
+import News from "./News/News";
+import Settings from "./Settings/Settings";
 // Импортируем маршрутизатор
-import {BrowserRouter, Route} from 'react-router-dom';
+import {Route} from 'react-router-dom';
 
 
 const Content = () => {
   return (
-      <BrowserRouter>
-        <main className='main'>
-          <div className="row">
-            <Sidebar/>
-            {/* Указываем маршруты */}
-            <Route path='/profile' component={Profile}/>
-            <Route path='/dialogs' component={Dialogs}/>
-          </div>
-        </main>
-      </BrowserRouter>
+    <main className='main'>
+      <div className="row">
+        <Sidebar/>
+        {/* Указываем маршруты */}
+        <Route path='/profile' component={Profile}/>
+        <Route path='/dialogs' component={Dialogs}/>
+        <Route path='/music' component={Music}/>
+        <Route path='/news' component={News}/>
+        <Route path='/settings' component={Settings}/>
+      </div>
+    </main>
   )
 }
 
