@@ -1,6 +1,6 @@
 import React from "react";
-import Sidebar from "./Sidebar";
-import Profile from "./Profile";
+import Sidebar from "./Sidebar/Sidebar";
+import Profile from "./Profile/Profile";
 
 const Content = () => {
   return (
