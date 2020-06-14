@@ -1,5 +1,7 @@
 import React from "react";
 import {NavLink} from "react-router-dom";
+import DialogItem from "./DialogItem/DialogItem";
+import Message from "./Message/Message";
 
 const Dialogs = () => {
   return (
@@ -7,34 +9,14 @@ const Dialogs = () => {
       <div className="row">
         <div className="col-md-5 mb-4">
           <h4 className="d-flex justify-content-between align-items-center mb-3">
-            <span className="text-muted">Dialogs</span>
-          </h4>
+          <span className="text-muted">Dialogs</span>
+        </h4>
           <ul className="list-group mb-3 dialogs">
-            <li className="list-group-item d-flex justify-content-between lh-condensed dialogs_item">
-              <div>
-                <NavLink to="/dialogs/1" className="my-0">Igor</NavLink>
-              </div>
-            </li>
-            <li className="list-group-item d-flex justify-content-between lh-condensed dialogs_item">
-              <div>
-                <NavLink to="/dialogs/2" className="my-0">Egor</NavLink>
-              </div>
-            </li>
-            <li className="list-group-item d-flex justify-content-between lh-condensed dialogs_item">
-              <div>
-                <NavLink to="/dialogs/3" className="my-0">Sveta</NavLink>
-              </div>
-            </li>
-            <li className="list-group-item d-flex justify-content-between bg-light dialogs_item">
-              <div className="text-success">
-                <NavLink to="/dialogs/4" className="my-0">Masha</NavLink>
-              </div>
-            </li>
-            <li className="list-group-item d-flex justify-content-between dialogs_item">
-              <div className="text-success">
-                <NavLink  to="/dialogs/5" className="my-0">Julia</NavLink>
-              </div>
-            </li>
+            <DialogItem authorName='Egor' id='1'/>
+            <DialogItem authorName='Igor' id='2'/>
+            <DialogItem authorName='Mariya' id='3'/>
+            <DialogItem authorName='Danil' id='4'/>
+            <DialogItem authorName='Julia' id='5'/>
           </ul>
         </div>
         <div className="col-md-7 mb-4">
@@ -43,20 +25,9 @@ const Dialogs = () => {
           </h4>
           <div className="card">
             <div className="card-body">
-              <div className="media mb-3">
-                <img src="https://dummyimage.com/50x50/ccc/000.png" className="mr-3" alt="..."/>
-                  <div className="media-body">
-                    <h5 className="mt-0">Media heading</h5>
-                    Cras sit amet nibh libero
-                  </div>
-              </div>
-              <div className="media mb-3">
-                <img src="https://dummyimage.com/50x50/ccc/000.png" className="mr-3" alt="..."/>
-                  <div className="media-body">
-                    <h5 className="mt-0">Media heading</h5>
-                    Cras sit amet nibh libero
-                  </div>
-              </div>
+              <Message title='Egor' text='some text' image='https://dummyimage.com/50x50/ccc/000.png'/>
+              <Message title='Me' text='some text' image='https://dummyimage.com/50x50/0f0/000.png'/>
+              <Message title='Egor' text='some text' image='https://dummyimage.com/50x50/ccc/000.png'/>
             </div>
           </div>
         </div>
