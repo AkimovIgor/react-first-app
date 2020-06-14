@@ -1,4 +1,5 @@
 import React from "react";
+import {NavLink} from "react-router-dom";
 
 const Dialogs = () => {
   return (
@@ -11,35 +12,28 @@ const Dialogs = () => {
           <ul className="list-group mb-3 dialogs">
             <li className="list-group-item d-flex justify-content-between lh-condensed dialogs_item">
               <div>
-                <h6 className="my-0">Product name</h6>
-                <small className="text-muted">Brief description</small>
+                <NavLink to="/dialogs/1" className="my-0">Igor</NavLink>
               </div>
-              <span className="text-muted">$12</span>
             </li>
             <li className="list-group-item d-flex justify-content-between lh-condensed dialogs_item">
               <div>
-                <h6 className="my-0">Second product</h6>
-                <small className="text-muted">Brief description</small>
+                <NavLink to="/dialogs/2" className="my-0">Egor</NavLink>
               </div>
-              <span className="text-muted">$8</span>
             </li>
             <li className="list-group-item d-flex justify-content-between lh-condensed dialogs_item">
               <div>
-                <h6 className="my-0">Third item</h6>
-                <small className="text-muted">Brief description</small>
+                <NavLink to="/dialogs/3" className="my-0">Sveta</NavLink>
               </div>
-              <span className="text-muted">$5</span>
             </li>
             <li className="list-group-item d-flex justify-content-between bg-light dialogs_item">
               <div className="text-success">
-                <h6 className="my-0">Promo code</h6>
-                <small>EXAMPLECODE</small>
+                <NavLink to="/dialogs/4" className="my-0">Masha</NavLink>
               </div>
-              <span className="text-success">-$5</span>
             </li>
             <li className="list-group-item d-flex justify-content-between dialogs_item">
-              <span>Total (USD)</span>
-              <strong>$20</strong>
+              <div className="text-success">
+                <NavLink  to="/dialogs/5" className="my-0">Julia</NavLink>
+              </div>
             </li>
           </ul>
         </div>
