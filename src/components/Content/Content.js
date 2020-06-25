@@ -17,12 +17,10 @@ const Content = (props) => {
       <div className="row">
         <Sidebar/>
         {/* Указываем маршруты */}
-        <Route path='/profile' render={ () => <Profile posts={props.posts}/> }/>
+        <Route path='/profile' render={ () => <Profile profilePage={props.state.profilePage}/> }/>
         {/* render - фтрибот для отрисовки компонента */}
         <Route exact path='/dialogs' render={
-          () => <Dialogs dialogs={props.dialogs}
-                         messages={props.messages}
-          />
+          () => <Dialogs messagesPage={props.state.messagesPage}/>
         }/>
         <Route path='/music' component={Music}/>
         <Route path='/news' render={ () => <MyPosts posts={props.posts}/> }/>
