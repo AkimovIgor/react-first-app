@@ -14,7 +14,10 @@ const App = (props) => {
       <div className='container'>
         <Header/>
         <Navbar/>
-        <Content posts={props.posts}/>
+        <Content posts={props.posts}
+                 dialogs={props.dialogs}
+                 messages={props.messages}
+        />
         <Footer/>
       </div>
     </BrowserRouter>
