@@ -1,11 +1,10 @@
 import React from "react";
 import Post from "./Post/Post";
 
-const MyPosts = () => {
+const MyPosts = (props) => {
 
 
-
-  let postElements = posts.map(
+  let postElements = props.posts.map(
     post => <Post
       title={post.title}
       date={post.date}
