@@ -8,7 +8,7 @@ const Profile = (props) => {
     <div className="col-md-9 blog-main">
 
       <ProfileInfo/>
-      <MyPosts posts={props.posts}/>
+      <MyPosts posts={props.profilePage.posts}/>
 
     </div>
   )

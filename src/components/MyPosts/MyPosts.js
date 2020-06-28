@@ -3,7 +3,6 @@ import Post from "./Post/Post";
 
 const MyPosts = (props) => {
 
-
   let postElements = props.posts.map(
     post => <Post
       title={post.title}

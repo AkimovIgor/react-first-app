@@ -2,6 +2,16 @@ import React from "react";
 import classes from "../Profile.module.css";
 
 const ProfileInfo = () => {
+
+  // Создать реферальную ссылку на DOM элемент = НЕ ЗЛОУПОТРЕБЛЯТЬ
+  let inputElement = React.createRef();
+
+  // Объявить новую функцию
+  let addPost = () => {
+    let val = inputElement.current.value;
+    alert(val);
+  }
+
   return (
     <div>
       <div className="jumbotron p-4 p-md-5 text-white rounded bg-dark">
@@ -26,10 +36,12 @@ const ProfileInfo = () => {
       <form action="">
         <div className="form-group">
           <label htmlFor="exampleFormControlTextarea1">Example textarea</label>
-          <textarea className="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+          {/* Привязать элемент к реферальной ссылке */}
+          <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" ref={ inputElement }></textarea>
         </div>
         <div className="form-group">
-          <button type="submit" className="btn btn-success">Submit</button>
+          {/* Повесить событие на елемент */}
+          <button type="button" className="btn btn-success" onClick={ addPost }>Submit</button>
         </div>
       </form>
 

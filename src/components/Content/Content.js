@@ -23,7 +23,7 @@ const Content = (props) => {
           () => <Dialogs messagesPage={props.state.messagesPage}/>
         }/>
         <Route path='/music' component={Music}/>
-        <Route path='/news' render={ () => <MyPosts posts={props.posts}/> }/>
+        <Route path='/news' render={ () => <MyPosts posts={props.state.profilePage.posts}/> }/>
         <Route path='/settings' component={Settings}/>
       </div>
     </main>

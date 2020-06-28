@@ -20,6 +20,13 @@ const Dialogs = (props) => {
       key={message.id}/>
   );
 
+  let messageInput = React.createRef();
+
+  let sendMessage = () => {
+    let inputVal = messageInput.current.value;
+    alert(inputVal)
+  }
+
   return (
     <div className="col-md-9">
       <div className="row">
@@ -41,7 +48,10 @@ const Dialogs = (props) => {
             <div className="card-body">
 
               { messageElements }
-
+              <div className="form-group">
+                <input type="text" className="form-control messageInput" style={{width: '100%'}} ref={ messageInput }/>
+              </div>
+              <button className="btn btn-primary" onClick={ sendMessage }>Send</button>
             </div>
           </div>
         </div>
