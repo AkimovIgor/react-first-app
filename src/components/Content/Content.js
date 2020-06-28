@@ -20,7 +20,7 @@ const Content = (props) => {
         <Route path='/profile' render={ () => <Profile profilePage={props.state.profilePage}/> }/>
         {/* render - фтрибот для отрисовки компонента */}
         <Route exact path='/dialogs' render={
-          () => <Dialogs messagesPage={props.state.messagesPage}/>
+          () => <Dialogs messagesPage={props.state.messagesPage} addMessage={props.addMessage}/>
         }/>
         <Route path='/music' component={Music}/>
         <Route path='/news' render={ () => <MyPosts posts={props.state.profilePage.posts}/> }/>

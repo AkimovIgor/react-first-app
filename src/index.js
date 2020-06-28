@@ -6,9 +6,12 @@ import * as serviceWorker from './serviceWorker';
 // Импортируем state извне
 import state from './redux/state';
 
+// Импортируем функцию
+import {addMessage} from "./redux/state";
+
 ReactDOM.render(
   <React.StrictMode>
-    <App state={state}/>
+    <App state={state} addMessage={ addMessage }/>
   </React.StrictMode>,
   document.getElementById('root')
 );

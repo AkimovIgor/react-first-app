@@ -60,4 +60,15 @@ let state = {
   }
 };
 
+export let addMessage = (messageText) => {
+  let newMessage = {
+    id: 4,
+    title: 'Me',
+    text: messageText,
+    image: 'https://dummyimage.com/50x50/0f0/000.png'
+  };
+  state.messagesPage.messages.push(newMessage);
+
+};
+
 export default state;

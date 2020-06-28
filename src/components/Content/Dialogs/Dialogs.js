@@ -5,6 +5,7 @@ import Message from "./Message/Message";
 
 const Dialogs = (props) => {
 
+
   let dialogElements = props.messagesPage.dialogs.map(
     dialog => <DialogItem
       authorName={dialog.name}
@@ -24,7 +25,7 @@ const Dialogs = (props) => {
 
   let sendMessage = () => {
     let inputVal = messageInput.current.value;
-    alert(inputVal)
+    props.addMessage(inputVal);
   }
 
   return (
