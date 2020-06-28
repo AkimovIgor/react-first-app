@@ -1,3 +1,4 @@
+import {renderEntireTree} from "../render";
 
 let state = {
   profilePage: {
@@ -68,7 +69,7 @@ export let addMessage = (messageText) => {
     image: 'https://dummyimage.com/50x50/0f0/000.png'
   };
   state.messagesPage.messages.push(newMessage);
-
+  renderEntireTree(state);
 };
 
 export default state;
